@@ -1,4 +1,4 @@
-# getx
+# getx_sample
 
 A new Flutter project.
 
