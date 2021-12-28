@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx/screens/firstPage.dart';
-import 'package:getx/screens/secondPage.dart';
-import 'package:getx/utils/Localization.dart';
+import 'package:getx_sample/utils/Localizations.dart';
+import 'home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,18 +14,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      defaultTransition: Transition.cupertino,
-      home: const MyHomePage(),
-      getPages: [
-        GetPage(name: '/first', page:()=> const MyHomePage()),
-        GetPage(name: '/second', page:()=> const SecondPage()),
-      ],
+      home: const Home(),
       locale: const Locale('en','US'),
-      translations: Transis(),
+      translations: MyTranslation(),
     );
   }
 }
-
